@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="title">My Survey Form</h1>
+    <p id="description">We would love to hear your thoughts! Please fill out the survey below.</p>
+  </header>
+
+  <main>
+    <form id="survey-form">
+
+      <label for="name" id="name-label">Name:</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Enter your full name" 
+        required
+      >
+
+      <label for="email" id="email-label">Email:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required
+      >
+
+      <label for="number" id="number-label">Age:</label>
+      <input 
+        type="number" 
+        id="number" 
+        name="age" 
+        placeholder="Enter your age" 
+        min="10" 
+        max="100"
+        required
+      >
+
+      <label for="dropdown">Your favorite programming language:</label>
+      <select id="dropdown" name="language" required>
+        <option value="">Select an option</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="react">React</option>
+      </select>
+
+      <fieldset>
+        <legend>Do you like coding?</legend>
+        <input type="radio" id="radio-yes" name="coding" value="yes" required>
+        <label for="radio-yes">Yes</label>
+
+        <input type="radio" id="radio-no" name="coding" value="no">
+        <label for="radio-no">No</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Which tools do you use? (Select all that apply)</legend>
+        <input type="checkbox" id="tool-vs" name="tools" value="VS Code">
+        <label for="tool-vs">VS Code</label>
+
+        <input type="checkbox" id="tool-git" name="tools" value="Git">
+        <label for="tool-git">Git</label>
+
+        <input type="checkbox" id="tool-terminal" name="tools" value="Terminal">
+        <label for="tool-terminal">Terminal</label>
+      </fieldset>
+
+      <label for="comments">Additional comments:</label>
+      <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+
+    </form>
+  </main>
+
+</body>
+</html>
